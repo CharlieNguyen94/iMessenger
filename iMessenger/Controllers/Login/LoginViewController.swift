@@ -195,13 +195,15 @@ class LoginViewController: UIViewController {
                 self?.spinner.dismiss()
             }
             
-            
             guard let result = authResult, error == nil else {
                 print("Failed to log in user with email: \(email)")
                 return
             }
             
             let user = result.user
+            
+            UserDefaults.standard.set(email, forKey: "email")
+            
             print("Logged in user: \(user)")
             
             strongSelf.navigationController?.dismiss(animated: true, completion: nil)
@@ -275,6 +277,8 @@ extension LoginViewController: LoginButtonDelegate {
                 print("Failed to get email and name from fb result")
                 return
             }
+            
+            UserDefaults.standard.set(email, forKey: "email")
             
             print(result)
             
