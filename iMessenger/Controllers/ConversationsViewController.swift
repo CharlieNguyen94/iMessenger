@@ -34,8 +34,19 @@ class ConversationsViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(tableView)
         view.addSubview(noConversationsLabel)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose,
+                                                            target: self,
+                                                            action: #selector(didTapComposeButton))
+        
         setupTableView()
         fetchConversations()
+    }
+    
+    @objc private func didTapComposeButton() {
+        let vc = NewConversationViewController()
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true)
     }
     
     override func viewDidLayoutSubviews() {
