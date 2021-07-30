@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		951D7FD826B2A81F0050430F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D7FD726B2A81F0050430F /* StorageManager.swift */; };
+		954EDAA126B3FFE80054CBEF /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954EDAA026B3FFE80054CBEF /* ConversationTableViewCell.swift */; };
 		95E8170026B159FA00D9E6A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E816FF26B159FA00D9E6A0 /* AppDelegate.swift */; };
 		95E8170226B159FA00D9E6A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E8170126B159FA00D9E6A0 /* SceneDelegate.swift */; };
 		95E8170426B159FA00D9E6A0 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E8170326B159FA00D9E6A0 /* ConversationsViewController.swift */; };
@@ -32,6 +33,7 @@
 		1AB62467983E6174D8320D42 /* Pods-iMessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMessenger.debug.xcconfig"; path = "Target Support Files/Pods-iMessenger/Pods-iMessenger.debug.xcconfig"; sourceTree = "<group>"; };
 		6EBFFD1E7E38F0DAA8C2541A /* Pods-iMessenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMessenger.release.xcconfig"; path = "Target Support Files/Pods-iMessenger/Pods-iMessenger.release.xcconfig"; sourceTree = "<group>"; };
 		951D7FD726B2A81F0050430F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		954EDAA026B3FFE80054CBEF /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
 		95E816FC26B159FA00D9E6A0 /* iMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E816FF26B159FA00D9E6A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95E8170126B159FA00D9E6A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				95E8171826B15ADB00D9E6A0 /* Storyboards */,
 				95E8170826B159FB00D9E6A0 /* Assets.xcassets */,
+				954EDAA026B3FFE80054CBEF /* ConversationTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				95E8170026B159FA00D9E6A0 /* AppDelegate.swift in Sources */,
 				95E8172426B15C1000D9E6A0 /* ProfileViewController.swift in Sources */,
 				95E8170226B159FA00D9E6A0 /* SceneDelegate.swift in Sources */,
+				954EDAA126B3FFE80054CBEF /* ConversationTableViewCell.swift in Sources */,
 				95E8172D26B1B74B00D9E6A0 /* ChatViewController.swift in Sources */,
 				95E8171E26B15BD900D9E6A0 /* PhotoViewerViewController.swift in Sources */,
 				951D7FD826B2A81F0050430F /* StorageManager.swift in Sources */,
