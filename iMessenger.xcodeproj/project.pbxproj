@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		951D7FD826B2A81F0050430F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D7FD726B2A81F0050430F /* StorageManager.swift */; };
 		954EDAA126B3FFE80054CBEF /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954EDAA026B3FFE80054CBEF /* ConversationTableViewCell.swift */; };
+		957ED2CF26CA784900DB997C /* NewConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957ED2CE26CA784900DB997C /* NewConversationCell.swift */; };
 		95E8170026B159FA00D9E6A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E816FF26B159FA00D9E6A0 /* AppDelegate.swift */; };
 		95E8170226B159FA00D9E6A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E8170126B159FA00D9E6A0 /* SceneDelegate.swift */; };
 		95E8170426B159FA00D9E6A0 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E8170326B159FA00D9E6A0 /* ConversationsViewController.swift */; };
@@ -34,6 +35,7 @@
 		6EBFFD1E7E38F0DAA8C2541A /* Pods-iMessenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMessenger.release.xcconfig"; path = "Target Support Files/Pods-iMessenger/Pods-iMessenger.release.xcconfig"; sourceTree = "<group>"; };
 		951D7FD726B2A81F0050430F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		954EDAA026B3FFE80054CBEF /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
+		957ED2CE26CA784900DB997C /* NewConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationCell.swift; sourceTree = "<group>"; };
 		95E816FC26B159FA00D9E6A0 /* iMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E816FF26B159FA00D9E6A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95E8170126B159FA00D9E6A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				95E8171826B15ADB00D9E6A0 /* Storyboards */,
 				95E8170826B159FB00D9E6A0 /* Assets.xcassets */,
 				954EDAA026B3FFE80054CBEF /* ConversationTableViewCell.swift */,
+				957ED2CE26CA784900DB997C /* NewConversationCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95E8171A26B15BAD00D9E6A0 /* LoginViewController.swift in Sources */,
+				957ED2CF26CA784900DB997C /* NewConversationCell.swift in Sources */,
 				95E8172B26B17B8500D9E6A0 /* DatabaseManager.swift in Sources */,
 				95E8171C26B15BB900D9E6A0 /* RegisterViewController.swift in Sources */,
 				95E8172226B15C0400D9E6A0 /* NewConversationViewController.swift in Sources */,
