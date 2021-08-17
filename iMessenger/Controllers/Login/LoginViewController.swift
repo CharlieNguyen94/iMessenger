@@ -90,6 +90,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         
+        
         loginObserver = NotificationCenter.default.addObserver(forName: .didLogInNotification, object: nil, queue: .main, using: { [weak self] _ in
             
             guard let strongSelf = self else {
@@ -103,6 +104,16 @@ class LoginViewController: UIViewController {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         
         super.viewDidLoad()
+        
+        let button = UIButton(type: .roundedRect)
+        button.frame = CGRect(x: 20, y: 50, width: 100, height: 30)
+        button.setTitle("Test Crash", for: [])
+        button.addTarget(self, action: #selector(self.crashButtonTapped(_:)), for: .touchUpInside)
+        button.backgroundColor = .red
+        scrollView.addSubview(button)
+        
+        
+        
         title = "Log in"
         view.backgroundColor = .systemBackground
         
@@ -172,6 +183,11 @@ class LoginViewController: UIViewController {
                                            height: 52)
         
     }
+    
+    @objc func crashButtonTapped(_ sender: AnyObject) {
+          let numbers = [0]
+          let _ = numbers[1]
+      }
     
     @objc private func loginButtonTapped() {
         emailField.resignFirstResponder()
