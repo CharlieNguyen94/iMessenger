@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 import JGProgressHUD
 
+/// Controller that allows users to register
 final class RegisterViewController: UIViewController {
     
     private let spinner = JGProgressHUD(style: .dark)
