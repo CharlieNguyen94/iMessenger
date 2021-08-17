@@ -80,7 +80,7 @@ class ChatViewController: MessagesViewController {
     }()
     
     public var isNewConversation = false
-    private let conversationId: String?
+    private var conversationId: String?
     public let otherUserEmail: String
     
     
@@ -414,6 +414,10 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
                 if success {
                     print("Message sent")
                     self?.isNewConversation = false
+                    let newConversationId = "conversation_\(message.messageId)"
+                    self?.conversationId = newConversationId
+                    self?.listenForMessages(id: newConversationId)
+                    self?.messageInputBar.inputTextView.text = nil
                 }
                 else {
                     print("Failed to send")
@@ -425,9 +429,9 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
                 return
             }
             // Append to existing conversation data
-            DatabaseManager.shared.sendMessage(to: conversationId, otherUserEmail: otherUserEmail, name: name, newMessage: message, completion: { success in
+            DatabaseManager.shared.sendMessage(to: conversationId, otherUserEmail: otherUserEmail, name: name, newMessage: message, completion: { [weak self] success in
                 if success {
-                    
+                    self?.messageInputBar.inputTextView.text = nil
                     print("message sent")
                 }
                 else {

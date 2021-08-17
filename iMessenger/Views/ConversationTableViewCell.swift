@@ -38,6 +38,7 @@ class ConversationTableViewCell: UITableViewCell {
         contentView.addSubview(userImageView)
         contentView.addSubview(userNameLabel)
         contentView.addSubview(userMessageLabel)
+        
     }
     
     required init?(coder: NSCoder) {

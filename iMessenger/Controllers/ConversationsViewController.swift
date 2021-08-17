@@ -52,13 +52,12 @@ class ConversationsViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(tableView)
         view.addSubview(noConversationsLabel)
-        
+        view.backgroundColor = .systemBackground
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose,
                                                             target: self,
                                                             action: #selector(didTapComposeButton))
         
         setupTableView()
-        fetchConversations()
         startListeningForConversations()
         
         loginObserver = NotificationCenter.default.addObserver(forName: .didLogInNotification, object: nil, queue: .main, using: { [weak self] _ in
@@ -88,15 +87,21 @@ class ConversationsViewController: UIViewController {
             case .success(let conversations):
                 print("Successfully got conversation models")
                 guard !conversations.isEmpty else {
+                    self?.tableView.isHidden = true
+                    self?.noConversationsLabel.isHidden = false
                     return
                 }
                 
+                self?.noConversationsLabel.isHidden = true
+                self?.tableView.isHidden = false
                 self?.conversations = conversations
                 
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                 }
             case .failure(let error):
+                self?.tableView.isHidden = true
+                self?.noConversationsLabel.isHidden = false
                 print("Failed to get convos: \(error)")
             }
         })
@@ -160,6 +165,10 @@ class ConversationsViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
+        noConversationsLabel.frame = CGRect(x: 10,
+                                            y: (view.height - 100) / 2,
+                                            width: view.width - 20,
+                                            height: 100)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -181,11 +190,7 @@ class ConversationsViewController: UIViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-    }
     
-    private func fetchConversations() {
-        tableView.isHidden = false
-        
     }
 }
 
