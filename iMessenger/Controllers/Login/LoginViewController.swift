@@ -11,6 +11,7 @@ import FBSDKLoginKit
 import GoogleSignIn
 import JGProgressHUD
 
+/// Controller to allow users to log in
 final class LoginViewController: UIViewController {
     
     private let spinner = JGProgressHUD(style: .dark)
