@@ -105,14 +105,13 @@ class LoginViewController: UIViewController {
         
         super.viewDidLoad()
         
+        // Crashlytics test button
         let button = UIButton(type: .roundedRect)
         button.frame = CGRect(x: 20, y: 50, width: 100, height: 30)
         button.setTitle("Test Crash", for: [])
         button.addTarget(self, action: #selector(self.crashButtonTapped(_:)), for: .touchUpInside)
         button.backgroundColor = .red
         scrollView.addSubview(button)
-        
-        
         
         title = "Log in"
         view.backgroundColor = .systemBackground
@@ -184,7 +183,8 @@ class LoginViewController: UIViewController {
         
     }
     
-    @objc func crashButtonTapped(_ sender: AnyObject) {
+    // Crashlytics test function
+    @objc private func crashButtonTapped(_ sender: AnyObject) {
           let numbers = [0]
           let _ = numbers[1]
       }
